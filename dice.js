@@ -51,6 +51,7 @@ function getDice(obj) {
       clearInterval(counter);
       $(obj).removeClass('dice-running');
       $('.btn').removeClass('btn-disable');
+      $('.btn').removeAttr('disabled');
     }
   }, 50)
   return true;
@@ -60,6 +61,6 @@ $(document).ready(function() {
   $('.btn').click(function() {
     getDice(document.querySelector('.dice'));
     $(this).addClass('btn-disable');
-    $(this).attr('disable', true);
+    $(this).attr('disabled', "true");
   })
 });
