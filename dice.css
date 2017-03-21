@@ -1,0 +1,78 @@
+body {
+  background-color: #efefef;
+}
+
+.dice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px auto 0;
+  width: 300px;
+  height: 300px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 40px #dedede;
+}
+
+.dice>div {
+  display: flex;
+  justify-content: center;
+}
+
+.dice>div>div {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background: #ea2000;
+  border-radius: 40px;
+}
+
+.dice-running {
+  animation: dice-animation 2.5s;
+  animation-timing-function: ease-out;
+}
+
+.btn {
+  display: block;
+  margin: 80px auto 0;
+  width: 200px;
+  padding: 20px 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 10px 20px #dedede;
+  color: #bebebe;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn.btn-disable {
+  animation: btn-animation 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.btn:hover {
+  box-shadow: 0 10px 30px #cdcdcd;
+  transition: box-shadow 0.4s
+}
+
+@keyframes dice-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes btn-animation {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
